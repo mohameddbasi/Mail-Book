@@ -21,8 +21,7 @@ let addrName = firstName = lastName = email = phone = streetAddr = postCode = ci
 
 // Address class
 class Address{
-    constructor(id, addrName, firstName, lastName, email, phone, streetAddr, postCode, city, country, labels)
-    {
+    constructor(id, addrName, firstName, lastName, email, phone, streetAddr, postCode, city, country, labels){
         this.id = id;
         this.addrName = addrName;
         this.firstName = firstName;
@@ -333,3 +332,30 @@ function getFormData(){
 function addErrMsg(inputBox){
     inputBox.classList.add('errorMsg');
 }
+
+
+
+// image slider
+const container = document.querySelector('.container');
+const btns = document.querySelectorAll('.btn')
+const imgList = ["1","2","3","4"]
+
+let index=0
+btns.forEach((button)=>{
+    button.addEventListener('click',()=>{
+        if(button.classList.contains('btn-left')){
+            index--;
+            if(index<0){
+                index = imgList.length-1;
+            }
+            container.style.background = `url("image/${imgList[index]}.jpg") center/cover fixed no-repeat`
+        }
+        else{
+            index++;
+            if(index===imgList.length){
+                index = 0;
+            }
+            container.style.background = `url("image/${imgList[index]}.jpg") center/cover fixed no-repeat`
+        }
+    })
+})

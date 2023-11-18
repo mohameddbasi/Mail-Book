@@ -31,9 +31,125 @@ button{
     cursor: pointer;
 }
 
+/* header */
+header{
+    height: auto;
+    border-bottom:2px solid #565657;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.navbar{
+    position:relative;
+    width: 100%;
+    height: 80px;
+    margin:auto;
+    padding: 0px;
+    background-color: #fa8e3f;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.links{
+    width:40%;
+    display: flex;
+    justify-content: space-between;
+    margin:30px;
+}
+.logo{
+    margin:50px;
+    font-weight: bold;
+}
+
+/* menu */
+.menu{
+    position:absolute;
+    max-width: 90px;
+    min-width: 200px!important;
+    text-align:center;
+    color: #fff;
+}
+
+.menus{
+    padding: 1.6rem;
+    min-height: 1070px;
+    border-right:2px solid#8e8d93;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.7);
+    background-color: #fa8e3f;
+}
+
+.menuss{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+    color:#fff;
+    box-shadow: 0 3px 4px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* imageslider */
+.img-container{
+    width:100%;
+    background-color: #fff;
+}
+.img-name{
+   
+    color: #020125;
+    
+}
+
+.container{
+    min-height: 50vh;
+    width:50%;
+    margin: 0 400px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+    position:relative;
+    background: url("image/1.jpg") center/cover fixed no-repeat;
+    transition:background 1s ease-in-out;
+}
+
+.img-name{
+    color: #020125;
+
+
+}
+.btn-left{
+    position:absolute;
+    top:50%;
+    left:-2%;
+    background-color: white;
+    padding:.4em .6em;
+    border-radius: 2em;
+    transform:translateY(calc(-50%));
+    cursor: pointer;
+}
+.btn-right{
+    position:absolute;
+    top:50%;
+    right:-2%;
+    background-color: white;
+    padding:.4em .6em;
+    border-radius: 2em;
+    transform:translateY(calc(-50%));
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
 /* modal */
 #fullscreen-div{
-    position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.2);
@@ -44,7 +160,7 @@ button{
 }
 .modal{
     background-color: #fff;
-    border-radius: 0.6rem;
+    border-radius: m;
     overflow: hidden;
     display: none;
     position: fixed;
@@ -160,15 +276,17 @@ button{
 
 /* address list */
 .addr-book{
-    padding: 1.4rem;
-    margin: 0 auto;
-    max-width: 900px;
-    min-width: 500px!important;
+    margin:0 200px;
+    max-width: 1500px;
+    min-width: 1151px!important;
+  
 }
 .addr-book-content{
     background-color: #fff;
     padding: 1.6rem;
     border-radius: 4px;
+    justify-items: flex-end;
+    
 }
 .addr-book-head{
     padding-top: 1.5rem;
@@ -211,7 +329,8 @@ button{
         -ms-transform: translateY(1px);
             transform: translateY(1px);
     -webkit-box-shadow: 0 1px 0 0 #bd5305;
-            box-shadow: 0 1px 0 0 #bd5305;;
+            box-shadow: 0 1px 0 0 #bd5305;
+            
 }
 .addr-book-list{
     margin: 1rem 0;
